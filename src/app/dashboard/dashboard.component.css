@@ -2,5 +2,11 @@
     max-height: 500px; /* Adjust the height as needed */
     overflow-y: auto;
   }
-  
-  
+  img {
+    width: 200px;
+    height: 100px;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+

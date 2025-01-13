@@ -1,81 +1,155 @@
-<div>
+<div class="d-flex flex-column flex-md-row">
+  <!-- Sidebar -->
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img
+      src="data:image/png;base64,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" 
+    />      <span class="fs-4 img-fluid"></span>
+    </a>
+    <hr>
+    <h4>Product Categories</h4>
+    <ul class="nav nav-pills flex-column mb-auto">
+      @for (catg of allCategory; track catg) {
+        <li class="nav-item">
+          <a href="#" class="nav-link link-dark" (click)="filterByCategory(catg.categoryId)" > 
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg> {{ catg.category }} </a>
+        </li>
+      }   @empty {
+        <li aria-hidden="true"> There are no items. </li>
+      }
+    </ul>
+    <hr>
+  </div>
 
-    <div class="container">
-      <div class="example-header">
-        <div class="row align-items-center">
-          <div class="col">
-            <mat-form-field class="w-100">
-              <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
-            </mat-form-field>
-          </div>
-          <div class="col-auto ">
-            <button type="button" class="btn btn-primary" data-bs-target="#addNew" data-bs-toggle="modal">Add New</button>
-            <button type="button" class="btn btn-secondary mx-1">Export</button>
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+
+    
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Products</h3>
+  <button class="btn btn-light border border-primary text-primary d-flex align-items-center"
+          style="padding: 0.5rem 1rem; border-radius: 8px;" >
+    Logout
+  </button>
+</div>
+
+    <div>
+    
+
+      <div class="container">
+        <div class="example-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <mat-form-field class="w-100">
+                <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+              </mat-form-field>
+            </div>
+            <div class="col-auto ">
+              @if (selectedCategory) {
+                <button type="button" class="btn btn-primary" data-bs-target="#addNew" data-bs-toggle="modal">Add New</button>
+              }
+              <button type="button" class="btn btn-secondary mx-1">Export</button>
+            </div>
           </div>
         </div>
+        <mat-table #table [dataSource]="dataSource" class="table-container">  
+          <ng-container matColumnDef="select">
+            <mat-header-cell *matHeaderCellDef>
+              <mat-checkbox (change)="$event ? masterToggle() : null"
+                            [checked]="selection.hasValue() && isAllSelected()"
+                            [indeterminate]="selection.hasValue() && !isAllSelected()">
+              </mat-checkbox>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <mat-checkbox (click)="$event.stopPropagation()"
+                            (change)="$event ? selection.toggle(row) : null"
+                            [checked]="selection.isSelected(row)">
+              </mat-checkbox>
+            </mat-cell>
+          </ng-container>
+          
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> No.</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+          </ng-container>
+          
+          <!-- Product Name Column -->
+          <ng-container matColumnDef="productname">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> Product Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.productname}} </mat-cell>
+          </ng-container>
+          
+          <!-- Description Column -->
+          <ng-container matColumnDef="description">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> Product Description </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+          </ng-container>
+          
+          <!-- Price Column -->
+          <ng-container matColumnDef="Price">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> Product Price </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Price}} </mat-cell>
+          </ng-container>
+          
+          <!-- Category Column -->
+          <ng-container matColumnDef="category">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> Product Category </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+          </ng-container>
+          
+          <!-- Image ID Column -->
+          <ng-container matColumnDef="ImageId">
+            <mat-header-cell *matHeaderCellDef style="font-weight: bold;"> Product Image ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <img src="https://github.com/SiddAjmera.png" alt="{{element.ImageId}}" width="50" height="50"> </mat-cell>
+          </ng-container>
+          
+          
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        
+        
+        
       </div>
-      <mat-table #table [dataSource]="dataSource" class="table-container">  
-        <ng-container matColumnDef="select">
-          <mat-header-cell *matHeaderCellDef>
-            <mat-checkbox (change)="$event ? masterToggle() : null"
-                          [checked]="selection.hasValue() && isAllSelected()"
-                          [indeterminate]="selection.hasValue() && !isAllSelected()">
-            </mat-checkbox>
-          </mat-header-cell>
-          <mat-cell *matCellDef="let row">
-            <mat-checkbox (click)="$event.stopPropagation()"
-                          (change)="$event ? selection.toggle(row) : null"
-                          [checked]="selection.isSelected(row)">
-            </mat-checkbox>
-          </mat-cell>
-        </ng-container>
-        
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-        </ng-container>
-        
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-        </ng-container>
-        
-        <!-- Weight Column -->
-        <ng-container matColumnDef="weight">
-          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-        </ng-container>
-        
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="symbol">
-          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-        </ng-container>
-        
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
-      
-    </div>
-  
+    
+  </div>
+  </div>
 </div>
+
+
   
   <!-- Modal -->
-  <div class="modal fade" id="addNew" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addNew" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="addNewModalLabel">Add Product</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <form>
+            <div class="form-group p-2">
+              <label for="productName">Product Name</label>
+              <input type="text" class="form-control" id="productName" aria-describedby="emailHelp" placeholder="Enter product name">
+            </div>
+            <div class="form-group p-2">
+              <label for="productImage">Product Image</label>
+              <input type="file" class="form-control" id="productImage" placeholder="Image" accept="image/*">
+            </div>
+            <div class="form-group p-2">
+              <label for="productDescription">Product Description</label>
+              <input type="text" class="form-control" id="productDescription" placeholder="description">
+            </div>
+            <div class="form-group p-2">
+              <label for="productPrice">Product Price</label>
+              <input type="number" class="form-control" id="productPrice" placeholder="Enter product price">
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" (click)="addNewProduct()">Add Product</button>
         </div>
       </div>
     </div>
